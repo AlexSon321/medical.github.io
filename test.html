@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="country">
+        <option value="ua">Ukraine</option>
+        <option value="pl">Poland</option>
+        <option value="uk">United Kindgom</option>
+    </select>
+    <select id="city"></select>
+    <script>
+        var countries = document.querySelector("#country");
+        var cities = document.querySelector("#city")
+
+        var data = {
+            ua: ['Kiyv', 'Lutsk'],
+            pl: ['Warsaw', 'Lutsk'],
+            uk: ['London', 'Lutsk'],
+        }
+
+
+
+        countries.addEventListener('change', function () {
+            var city = data[this.value]
+            cities.length = 0;
+
+            addOptions(cities, city)
+        })
+
+        function addOptions(select, arr) {
+            for (var i = 0; i < arr.length; i++) {
+                select.add(new Option(arr[i]))
+            }
+        }
+
+    </script>
+</body>
+
+</html>
