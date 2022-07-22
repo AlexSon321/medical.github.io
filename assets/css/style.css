@@ -1874,6 +1874,19 @@ footer {
     border-radius: 10px
 }
 
+.video-item .video-content a {
+    color: #fff;
+    background-color: #4d93e9;
+    max-width: 40px;
+    font-size: 16px;
+    top: 30px;
+    border-radius: 22px;
+    font-weight: 700;
+    padding: 10px 15px;
+    position: relative;
+
+}
+
 .emergency-item {
     margin-bottom: 30px;
     position: relative
